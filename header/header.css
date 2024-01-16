@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* header {
+    background-color:#008001;
+    height: 5px;
+    color: #fff;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0px;
+    font-family: 'Arial', sans-serif;
+} */
+
+
+
+nav {
+    margin-top: 0px;
+    padding: 0px;
+}
+header img {
+    height: 150px;
+    width: 100%;
+}
