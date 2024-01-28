@@ -1,0 +1,27 @@
+.navbar {
+    background-color: #fff; 
+    margin-top: 200;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+.navbar-nav {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-nav a {
+    margin: 0 20px;
+    font-size: 20px;
+    color: darkred;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav a:hover {
+    background-color: green;
+}
+
+#navigationbar{
+    margin-top: 200px;
+}
