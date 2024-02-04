@@ -74,7 +74,10 @@
     </style>
 </head>
 <body>
+        <!--Header Reference-->
+        <div id="header"></div>
         <main>
+
             <div class="menu-content">
                 <div class="menu-items">
                     <div class="card idly">
@@ -157,6 +160,14 @@
             </div>
            
         </main>
+
+            <!--Script to call header-->
+        <script>
+            // Fetch and inject header
+            fetch('../header/header.html')
+                .then(response => response.text())
+                .then(data => document.getElementById('header').innerHTML = data);
+        </script>
 
 </body>
 </html>
