@@ -6,51 +6,113 @@
     <title>GUPTA'S FOOD COURT</title>
     <link rel="stylesheet" href="../header/header.css">
     <style>
-        .contactcontainer{
+        /* Reset some default styles */
+        body, h1, h2, h3, p, div, form, input, textarea, button {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        main {
+            margin: 20px;
+        }
+
+        .contactcontainer {
             display: flex;
-            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 20px;
         }
-        .details{
-            flex: 200px;
+
+        .details {
+            flex: 1;
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .form {
+            flex: 1;
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h3 {
+            margin-bottom: 10px;
+        }
+
+        .topbar-stip {
+            margin-bottom: 15px;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .form-heading {
+            text-decoration: underline;
+            margin-bottom: 20px;
+        }
+        
+        .form-floating label {
+            font-weight: bold;
+        }
+        
+        /* Adjustments for input and textarea */
+        input[type="name"],
+        input[type="email"],
+        input[type="number"],
+        textarea {
+            width: 100%;
             padding: 10px;
-            /* margin-top: 50px; */
-            margin-left: 50px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
         }
-        .form{
-            flex: 300px;
-            padding: 50px;
-            /* background-color: red; */
-            margin-left: 150px;
-            margin-right: 300px;
-            margin-top: 0px;
-            font-size: medium;
-        }
-        .form-floating{
-            padding: 5px;
-        }
-        label{
-            padding: 2px;
-            font-size: 20px;
-        }
-        input{
-            width: 400px;
-            height: 30px;
-            
-        }
-        textarea{
-            width: 400px;
-            height: 90px;
-            align-content:center;
-        }
-        button{
-            margin-left: 150px;
-            margin-top: 20px;
-            width: 100px;
-            height: 40px;
+        
+        /* Style the submit button */
+        button {
+            width: 100%;
+            padding: 10px;
             background-color: #620f44;
-            color: white;
-            font-size: 18px;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
         }
+        
+
+        .form-floating {
+            margin-bottom: 10px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        button:hover {
+            background-color: #542038;
+        }
+
+        
     </style>
 
 </head>
