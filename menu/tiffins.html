@@ -9,10 +9,12 @@
 <body>
         <!--Header Reference-->
         <div id="header"></div>
+        <div id="menuPage"></div>
         <main>
 
             <div class="menu-content">
                 <div class="menu-items">
+
                     <div class="card idly">
                         <h2>IDLY</h2>
                         <ul>
@@ -21,6 +23,26 @@
                                 <h5 class="item-name">SAMBAR IDLY<span class="price">50</span></h5>
                                 <h5 class="item-name">BUTTER IDLY<span class="price">50</span></h5>
                                 <h5 class="item-name">TAWA IDLY<span class="price">50</span></h5>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card bajji">
+                        <h2>MYSORE BAJJI</h2>
+                        <ul>
+                            <li class="itemname">
+                                <h5 class="item-name">MYSORE BAJJI<span class="price">30</span></h5>
+                                <h5 class="item-name">TAWA MYSORE BAJJI<span class="price">60</span></h5>
+                                <h5 class="item-name">FRIED TAWA MYSORE BAJJI<span class="price">80</span></h5>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card wada">
+                        <h2>WADA</h2>
+                        <ul>
+                            <li class="itemname">
+                                <h5 class="item-name">WADA<span class="price">35</span></h5>
+                                <h5 class="item-name">SAMBAR WADA<span class="price">45</span></h5>
+                                <h5 class="item-name">TAWA WADA<span class="price">70</span></h5>
                             </li>
                         </ul>
                     </div>
@@ -41,27 +63,20 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="card wada">
-                        <h2>WADA</h2>
+                    
+
+
+
+                    <div class="card uttapam">
+                        <h2>UTTAPAM</h2>
                         <ul>
                             <li class="itemname">
-                                <h5 class="item-name">WADA<span class="price">35</span></h5>
-                                <h5 class="item-name">SAMBAR WADA<span class="price">45</span></h5>
-                                <h5 class="item-name">TAWA WADA<span class="price">70</span></h5>
+                                <h5 class="item-name">ONION UTTAPAM<span class="price">60</span></h5>
+                                <h5 class="item-name">TOMATO ONION UTTAPAM<span class="price">70</span></h5>
                             </li>
                         </ul>
                     </div>
-                    <div class="card bajji">
-                        <h2>MYSORE BAJJI</h2>
-                        <ul>
-                            <li class="itemname">
-                                <h5 class="item-name">MYSORE BAJJI<span class="price">30</span></h5>
-                                <h5 class="item-name">TAWA MYSORE BAJJI<span class="price">60</span></h5>
-                                <h5 class="item-name">FRIED TAWA MYSORE BAJJI<span class="price">80</span></h5>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="card">
+                    <div class="card dosa">
                         <h2>DOSA</h2>
                         <ul>
                             <li class="itemname dosa">
@@ -80,15 +95,6 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="card uttapam">
-                        <h2>UTTAPAM</h2>
-                        <ul>
-                            <li class="itemname">
-                                <h5 class="item-name">ONION UTTAPAM<span class="price">60</span></h5>
-                                <h5 class="item-name">TOMATO ONION UTTAPAM<span class="price">70</span></h5>
-                            </li>
-                        </ul>
-                    </div>
                 </div>
             </div>
            
@@ -100,6 +106,9 @@
             fetch('../header/header.html')
                 .then(response => response.text())
                 .then(data => document.getElementById('header').innerHTML = data);
+            fetch('../menu/index1.html')
+                .then(response => response.text())
+                .then(data => document.getElementById('menuPage').innerHTML = data);
         </script>
 
 </body>

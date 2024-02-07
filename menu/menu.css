@@ -1,22 +1,48 @@
-.menu-bar{
-    display: block;
-    margin: 0px 150px;
-    padding: 20px;
-    background-color: rgba(255, 228, 196, 0.246);
-    border-color: #620f44a9;
-    border-style:solid;
-    border-width: 0.5px;
+#header{
+    width: 100%;
 }
-.menu-pills{
-    max-width: 1080px;
-    margin-left: 100px;
-    margin-right: 100px;
 
-    }
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+}
+.sidenav {
+    z-index: 1;
+    top: 20px;
+    left: 0px;
+    background: #eee;
+    background-color: #ffff;
+    overflow-x: hidden;
+    overflow: auto;
+    padding: 8px 0;
+    height: 1150px;
+} 
+
+.sidenav a {
+  margin-top: 20px;
+  padding: 30px 10px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #2196F3;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #064579;
+}
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+/* Navigation item list styling */
 .menu-link{
     color: black;
     font-weight: 500;
-    margin: 0px 50px;
+    margin: 30px 50px;
     padding: 5px;
     justify-content: space-evenly;
     white-space: nowrap;
@@ -24,41 +50,29 @@
     align-items: center;
 }
 
-
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f8f8f8;
-    color: #333;
-    margin: 0;
-    padding: 0;
-}
-
-main {
-    padding: 20px;
-}
-
 .menu-content {
     display: flex;
+    position: relative;
     justify-content: center;
-    margin: 0px 100px;
+    margin-top: 20px;
+    margin-left: 250px;
+    margin-right: 50px;
 }
 
-.menu-items {
-    display: flex;
+#menuPage{
+    position: absolute;
+    height: 100%;
+}
+.menu-items{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     flex-wrap: wrap;
     gap: 20px;
+    margin-left: 20px;
 }
 
-.card {
-    background-color: #fff;
-    border-radius: 12px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin-bottom: 20px;
-    transition: transform 0.3s ease-in-out;
-    width: 250px; /* Set a fixed width for the cards */
-}
 
+/* Card styling */
 .card:hover {
     transform: scale(1.05);
 }
@@ -91,4 +105,38 @@ h2 {
 .price {
     color: #620f44;
     margin-left: 10px;
+}
+.card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+    width:320px; /* Set a fixed width for the cards */
+}
+
+/* Tiffins Card Styling */
+ .puri, .uttapam{
+    height: 150px;
+}
+.wada, .bajji, .idly, .upma{
+    height: 220px;
+}
+.dosa{
+    grid-column: 1 /2;
+    grid-row: 1 / 4;
+}
+/* Indian Card Styling */
+.paratha{
+    grid-column: 3/4;
+}
+.biryani{
+    grid-column: 2 /3;
+}
+.paneerCurries{
+    grid-row: 1/3;
+}
+.soup{
+    grid-row: 3/4;
 }

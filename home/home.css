@@ -25,3 +25,9 @@
 #navigationbar{
     margin-top: 200px;
 }
+*{
+    font-family: sans-serif;
+    line-height: 40px;
+    word-spacing: 3px;
+    font-size: 18px;
+}

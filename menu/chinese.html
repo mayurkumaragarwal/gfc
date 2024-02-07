@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="../menu/menu.css">
 </head>
 <body>
+        <!--Header Reference-->
+        <div id="header"></div>
+        <div id="menuPage"></div>
         <main>
             <div class="menu-content">
                 <div class="menu-items">
@@ -87,6 +90,17 @@
             </div>
            
         </main>
+
+        <!--Script to call header-->
+        <script>
+            // Fetch and inject header
+            fetch('../header/header.html')
+                .then(response => response.text())
+                .then(data => document.getElementById('header').innerHTML = data);
+            fetch('../menu/index1.html')
+                .then(response => response.text())
+                .then(data => document.getElementById('menuPage').innerHTML = data);
+        </script>
 
 </body>
 </html>
