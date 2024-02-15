@@ -103,6 +103,7 @@ h2 {
 }
 
 .price {
+    display: none;
     color: #620f44;
     margin-left: 10px;
 }

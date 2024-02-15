@@ -1,0 +1,14 @@
+.carouselImage{
+    margin: 0px 10px;
+  }
+  img{
+    width: 1500px;
+    height: 400px;
+  }
+  @media only screen and (max-width: 600px){
+    img{
+      width: 300px;
+      height: 160px;
+      margin: 0;
+    }
+  }
