@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GUPTA'S FOOD COURT</title>
+    <link rel="icon" type="image/x-icon" href="../content/logo/gfc_logo.png" />
+    <link rel="stylesheet" href="../styling/home.css" />
+  </head>
+  <body>
+    <!--Header Reference-->
+    <div id="header"></div>
+    <div id="carousel-container"></div>
+    <div id="swiggyzomatoanimation"></div>
+    <main>
+      <div class="textContentMain">
+        <div class="textContent">
+          <h2>
+            Welcome to <strong style="color: orange">GUPTA'S FOOD COURT</strong>
+          </h2>
+          <br />
+          <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;If you are looking for nice restaurants in
+            Hyderabad which serves Good Quality Pure Vegetarian food at
+            reasonable price, then we are the perfect choice. We take immense
+            pride in serving pure vegetarian dishes that are crafted with
+            passion and rooted in authenticity.<br /><br />
+
+            &nbsp;&nbsp;&nbsp;&nbsp;GUPTA'S FOOD COURT is specialist in Tiffins,
+            Chinese Fast Food, Rajasthani and North Indian Cuisine offers
+            immense variety of high standard, hygienic, healthy, and mouth
+            watering food menu items to choose from. We serve Breakfast, Lunch
+            and Dinner.<br /><br />
+
+            &nbsp;&nbsp;&nbsp;&nbsp;We pride ourselves on being one of the best
+            vegetarian food court in the heart of Old City, Hyderabad. Join us
+            and experience the Delicious Food with Unlimited joy and let your
+            belly to dance with Food and mind to feel Refresh.<br /><br />
+
+            &nbsp;&nbsp;&nbsp;&nbsp;We believe that it is the right of every
+            individual to receive the best of service along with hygienic,
+            flavorful and authentic food without having to pay an unreasonable
+            price for it.<br /><br />
+
+            &nbsp;&nbsp;&nbsp;&nbsp;Nothing makes us happier than to see you
+            happy. Our friendly, warm service will make you will feel at
+            home.<br /><br />
+
+            &nbsp;&nbsp;&nbsp;&nbsp;Order Online by clicking on the
+            <a
+              href="https://www.zomato.com/hyderabad/gupta-tiffins-fast-food-charminar/order"
+              target="_blank"
+              ><strong>Zomato</strong></a
+            >
+            or
+            <a
+              href="https://www.swiggy.com/restaurants/gupta-tiffins-and-fast-food-doodh-bowli-charminar-hyderabad-527203"
+              target="_blank"
+              ><strong>Swiggy</strong></a
+            >
+          </p>
+        </div>
+        <div class="vegImage">
+          <img src="../content/home_content/vegeterian.png" alt="image" />
+          <h5 id="vegImageText">100% PURE VEGETERIAN</h5>
+        </div>
+      </div>
+    </main>
+
+    <!--Script to call header-->
+    <script>
+      // Fetch and inject header
+      fetch("../header/header.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("header").innerHTML = data;
+
+          // After loading the header, create an iframe for carousel
+          const carouselIframe = document.createElement("iframe");
+          carouselIframe.src = "./carousel.html";
+          carouselIframe.style.width = "100%";
+          carouselIframe.style.border = "none";
+          carouselIframe.style.height = "500px";
+
+          // Append iframe to container
+          document
+            .getElementById("carousel-container")
+            .appendChild(carouselIframe);
+
+          // Fetch and inject Swiggy-Zomato animation
+          return fetch("./swiggyzomatoanimation.html");
+        })
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("swiggyzomatoanimation").innerHTML = data;
+        });
+    </script>
+  </body>
+</html>
